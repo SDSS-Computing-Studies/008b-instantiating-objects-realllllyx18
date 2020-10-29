@@ -82,20 +82,6 @@ class animals:
     Owner = None
     Birthdate = None
     
-    def instructions():
-        print("1. Enter a new pet")
-        print("2. Retrieve a pet")
-        print("3. Exit")
-
-    def index(self):
-        index = input("Enter the index: ")
-        if index == "1":
-            __init__(self)
-        if index == "2":
-            displayPet(self)
-        if index == "3":
-            return
-        
     def __init__(self):
         self.Pet = input("Type of animal?")
         self.Breed = input("Breed?")
@@ -105,8 +91,41 @@ class animals:
 
     def displayPet(self):
         self.Retieve = input("Which pet?")
-        output = str(self.Name + " " + self.Pet)
-        output = str(self.Breed + " is owned by " + self.Owner)
+        output1 = str(self.Name + " " + self.Pet)
+        output2 = str(self.Breed + " is owned by " + self.Owner)
+        print(output1)
+        print(output2)
+    
+    def  __del__(self):
+        print("Goodbye.")
 
-animals = []
-        
+    #def index(self):
+        #index = input("Enter the index: ")
+        #if index == "1":
+        #    __init__(self)
+        #if index == "2":
+        #    displayPet(self)
+        #if index == "3":
+            #return
+
+def main():
+    animal = []
+    num = 0
+    while 1 > 0:
+        input("1. Enter a new pet\n" + "2. Retrieve a pet\n" + "3. Exit\n")
+        if num == 1:
+            for i in range(0,3):
+                animal.append(animals())
+        if num == 2:
+            print(output1)
+            print(output2)
+        if num == 3:
+            print("Goodbye.")
+            break
+main()
+
+            
+
+
+            
+
