@@ -74,45 +74,32 @@ Shih-tzu is owned by Christy
 (10 points) 
 """
 
-class animals:
-    Pet = None
-    Retrieve = None
-    Breed = None
-    Name = None
-    Owner = None
-    Birthdate = None
-    
+class animal:
+    animaltype = None
+    breed = None
+    name = None
+    owner = None
+    birthdate = None
+    num = None
+
     def __init__(self):
-        self.Pet = input("Type of animal?")
-        self.Breed = input("Breed?")
-        self.Name = input("Name?")
-        self.Owner = input("Owner?")
-        self.Birthdate = int(input("Birthdate?"))
+        self.animaltype = input("Type of animal?")
+        self.breed = input("Breed?")
+        self.name = input("Name?")
+        self.owner = input("Owner?")
+        self.birthdate = input("Birthdate?")
 
-    def displayPet(self):
-        self.Retieve = input("Which pet?")
-        output1 = str(self.Name + " " + self.Pet)
-        output2 = str(self.Breed + " is owned by " + self.Owner)
-        print(output1)
-        print(output2)
-    
-    def  __del__(self):
-        print("Goodbye.")
-
-    #def index(self):
-        #index = input("Enter the index: ")
-        #if index == "1":
-        #    __init__(self)
-        #if index == "2":
-        #    displayPet(self)
-        #if index == "3":
-            #return
+    def display(self):
+        length = len(self.name)
+        print(self.name)
+        print(self.animaltype)
+        print(self.breed)
+        print("is owned by:" + self.owner)
 
 def main():
     animals = []
     num = 0
     while 1 > 0:
-        print("====\n"+"MENU\n"+"====")
         print("1. Enter a new pet\n" + "2. Retrieve a pet\n" + "3. Exit")
         num = int(input("Choose number 1, 2, or 3:"))
         if num == 1:
@@ -127,7 +114,7 @@ def main():
         if num == 3:
             print("Goodbye.")
             break
-            
+
 main()
 
             
