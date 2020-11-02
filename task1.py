@@ -109,19 +109,25 @@ class animals:
             #return
 
 def main():
-    animal = []
+    animals = []
     num = 0
     while 1 > 0:
-        input("1. Enter a new pet\n" + "2. Retrieve a pet\n" + "3. Exit\n")
+        print("====\n"+"MENU\n"+"====")
+        print("1. Enter a new pet\n" + "2. Retrieve a pet\n" + "3. Exit")
+        num = int(input("Choose number 1, 2, or 3:"))
         if num == 1:
-            for i in range(0,3):
-                animal.append(animals())
+            animals.append(animal())
         if num == 2:
-            print(output1)
-            print(output2)
+            length = len(animals)
+            inputname = input("Enter the name of the pet:")
+            for i in range(0,length):
+                petname = animals[i].name
+                if petname == inputname:
+                    animals[i].display()
         if num == 3:
             print("Goodbye.")
             break
+            
 main()
 
             
